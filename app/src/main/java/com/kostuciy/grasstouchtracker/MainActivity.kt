@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.kostuciy.grasstouchtracker.ui.theme.GrassTouchTrackerTheme
+import com.kostuciy.ui.theme.GrassTouchTrackerTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +44,7 @@ fun Greeting(
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    GrassTouchTrackerTheme {
+    com.kostuciy.ui.theme.GrassTouchTrackerTheme {
         Greeting("Android")
     }
 }
