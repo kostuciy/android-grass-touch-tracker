@@ -21,4 +21,12 @@ dependencyResolutionManagement {
 
 rootProject.name = "Grass Touch Tracker"
 include(":app")
- 
+include(":core")
+include(":features")
+include(":core:data")
+include(":core:domain")
+include(":core:ui")
+include(":features:scan")
+include(":features:useractivity")
+include(":features:settings")
+include(":features:map")
