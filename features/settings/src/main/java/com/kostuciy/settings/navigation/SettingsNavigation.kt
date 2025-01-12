@@ -17,9 +17,17 @@ data object GeneralSettings
 @Serializable
 data object EditProfile
 
+fun NavGraphBuilder.generalSettingsScreen() {
+    composable<GeneralSettings> { GeneralSettingsScreen() }
+}
+
+fun NavGraphBuilder.editProfileScreen() {
+    composable<EditProfile> { EditProfileScreen() }
+}
+
 fun NavGraphBuilder.settingsGraph(navController: NavController) {
     navigation<SettingsGraph>(startDestination = GeneralSettings) {
-        composable<GeneralSettings> { GeneralSettingsScreen() }
-        composable<EditProfile> { EditProfileScreen() }
+        generalSettingsScreen()
+        editProfileScreen()
     }
 }
