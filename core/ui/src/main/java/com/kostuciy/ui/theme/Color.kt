@@ -1,11 +1,28 @@
 package com.kostuciy.ui.theme
 
+import androidx.compose.runtime.Immutable
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+@Immutable
+data class TrackerColors(
+    val background: Color,
+    val primary: Color,
+    val secondary: Color,
+    val text: Color,
+    val primaryText: Color,
+    val secondaryText: Color,
+    val paramsText: Color,
+    val argumentsText: Color,
+    val annotationText: Color,
+    val constructionsText: Color,
+)
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+val darkGray = Color(0xFF252525)
+val black = Color(0xFF111111)
+val brightGreen = Color(0xFFBBE712)
+val white = Color(0xFFFDFDFD)
+val gray = Color(0xFF7E7E7E)
+val pink = Color(0xFFC77DBB)
+val blue = Color(0xFF57AAF7)
+val yellow = Color(0xFFB3AE60)
+val orange = Color(0xFFCF8E6D)
