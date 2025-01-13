@@ -45,10 +45,10 @@ fun TrackerTheme(content: @Composable () -> Unit) {
         )
 
     CompositionLocalProvider {
-        Colors provides colors
-        Dimens provides dimens
-        Spacing provides spacing
-        Typography provides typography
+        LocalColors provides colors
+        LocalDimens provides dimens
+        LocalSpacing provides spacing
+        LocalTypography provides typography
         content()
     }
 }
@@ -56,19 +56,19 @@ fun TrackerTheme(content: @Composable () -> Unit) {
 object TrackerTheme {
     val colors: TrackerColors
         @Composable
-        get() = Colors.current
+        get() = LocalColors.current
     val dimens: TrackerDimens
         @Composable
-        get() = Dimens.current
+        get() = LocalDimens.current
     val spacing: TrackerSpacing
         @Composable
-        get() = Spacing.current
+        get() = LocalSpacing.current
     val typography: TrackerTypography
         @Composable
-        get() = Typography.current
+        get() = LocalTypography.current
 }
 
-val Colors =
+val LocalColors =
     staticCompositionLocalOf {
         TrackerColors(
             background = Color.Unspecified,
@@ -83,7 +83,7 @@ val Colors =
             constructionsText = Color.Unspecified,
         )
     }
-val Dimens =
+val LocalDimens =
     staticCompositionLocalOf {
         TrackerDimens(
             small = Dp.Unspecified,
@@ -91,7 +91,7 @@ val Dimens =
             large = Dp.Unspecified,
         )
     }
-val Spacing =
+val LocalSpacing =
     staticCompositionLocalOf {
         TrackerSpacing(
             smallest = Dp.Unspecified,
@@ -102,7 +102,7 @@ val Spacing =
             largest = Dp.Unspecified,
         )
     }
-val Typography =
+val LocalTypography =
     staticCompositionLocalOf {
         TrackerTypography(
             title = TextStyle.Default,
