@@ -3,9 +3,6 @@ package com.kostuciy.ui.theme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.staticCompositionLocalOf
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.unit.Dp
 
 @Composable
 fun TrackerTheme(content: @Composable () -> Unit) {
@@ -14,8 +11,9 @@ fun TrackerTheme(content: @Composable () -> Unit) {
             background = darkGray,
             primary = black,
             secondary = brightGreen,
+            divider = gray,
             text = white,
-            primaryText = gray,
+            primaryText = brightGray,
             secondaryText = darkGray,
             paramsText = pink,
             argumentsText = blue,
@@ -71,42 +69,73 @@ object TrackerTheme {
 val LocalColors =
     staticCompositionLocalOf {
         TrackerColors(
-            background = Color.Unspecified,
-            primary = Color.Unspecified,
-            secondary = Color.Unspecified,
-            text = Color.Unspecified,
-            primaryText = Color.Unspecified,
-            secondaryText = Color.Unspecified,
-            paramsText = Color.Unspecified,
-            argumentsText = Color.Unspecified,
-            annotationText = Color.Unspecified,
-            constructionsText = Color.Unspecified,
+            background = darkGray,
+            primary = black,
+            secondary = brightGreen,
+            divider = gray,
+            text = white,
+            primaryText = brightGray,
+            secondaryText = darkGray,
+            paramsText = pink,
+            argumentsText = blue,
+            annotationText = yellow,
+            constructionsText = orange,
         )
+//        TrackerColors(
+//            background = Color.Unspecified,
+//            primary = Color.Unspecified,
+//            secondary = Color.Unspecified,
+//            text = Color.Unspecified,
+//            primaryText = Color.Unspecified,
+//            secondaryText = Color.Unspecified,
+//            paramsText = Color.Unspecified,
+//            argumentsText = Color.Unspecified,
+//            annotationText = Color.Unspecified,
+//            constructionsText = Color.Unspecified,
+//        )
     }
 val LocalDimens =
     staticCompositionLocalOf {
         TrackerDimens(
-            small = Dp.Unspecified,
-            medium = Dp.Unspecified,
-            large = Dp.Unspecified,
+            small = smallDimen,
+            medium = mediumDimen,
+            large = largeDimen,
         )
+//        TrackerDimens(
+//            small = Dp.Unspecified,
+//            medium = Dp.Unspecified,
+//            large = Dp.Unspecified,
+//        )
     }
 val LocalSpacing =
     staticCompositionLocalOf {
         TrackerSpacing(
-            smallest = Dp.Unspecified,
-            small = Dp.Unspecified,
-            medium = Dp.Unspecified,
-            mediumLarge = Dp.Unspecified,
-            large = Dp.Unspecified,
-            largest = Dp.Unspecified,
+            smallest = smallestSpacing,
+            small = smallSpacing,
+            medium = mediumSpacing,
+            mediumLarge = mediumLargeSpacing,
+            large = largeSpacing,
+            largest = largestSpacing,
         )
+//        TrackerSpacing(
+//            smallest = Dp.Unspecified,
+//            small = Dp.Unspecified,
+//            medium = Dp.Unspecified,
+//            mediumLarge = Dp.Unspecified,
+//            large = Dp.Unspecified,
+//            largest = Dp.Unspecified,
+//        )
     }
 val LocalTypography =
     staticCompositionLocalOf {
         TrackerTypography(
-            title = TextStyle.Default,
-            body = TextStyle.Default,
-            label = TextStyle.Default,
+            title = jetbrainsMonoBig,
+            body = jetbrainsMonoMedium,
+            label = jetbrainsMonoSmall,
         )
+//        TrackerTypography(
+//            title = TextStyle.Default,
+//            body = TextStyle.Default,
+//            label = TextStyle.Default,
+//        )
     }

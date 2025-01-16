@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Grass Touch Tracker</string>
+    <string name="app_name" translatable="false">Grass Touch Tracker</string>
+    <string name="plus" translatable="false">+</string>
+    <string name="minus">-</string>
 </resources>

@@ -8,6 +8,7 @@ data class TrackerColors(
     val background: Color,
     val primary: Color,
     val secondary: Color,
+    val divider: Color,
     val text: Color,
     val primaryText: Color,
     val secondaryText: Color,
@@ -18,10 +19,11 @@ data class TrackerColors(
 )
 
 val darkGray = Color(0xFF252525)
+val gray = Color(0xFF363636)
 val black = Color(0xFF111111)
 val brightGreen = Color(0xFFBBE712)
 val white = Color(0xFFFDFDFD)
-val gray = Color(0xFF7E7E7E)
+val brightGray = Color(0xFF7E7E7E)
 val pink = Color(0xFFC77DBB)
 val blue = Color(0xFF57AAF7)
 val yellow = Color(0xFFB3AE60)

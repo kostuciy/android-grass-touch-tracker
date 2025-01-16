@@ -11,6 +11,6 @@ data class TrackerDimens(
     val large: Dp,
 )
 
-val smallDimen = 4.dp
-val mediumDimen = 8.dp
-val largeDimen = 16.dp
+val smallDimen = 8.dp
+val mediumDimen = 24.dp
+val largeDimen = 48.dp

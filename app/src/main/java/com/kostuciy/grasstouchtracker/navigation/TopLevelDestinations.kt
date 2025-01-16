@@ -2,6 +2,7 @@ package com.kostuciy.grasstouchtracker.navigation
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
+import androidx.compose.ui.graphics.Color
 import com.kostuciy.map.navigation.Map
 import com.kostuciy.settings.navigation.SettingsGraph
 import com.kostuciy.useractivity.navigation.UserActivity
@@ -12,6 +13,7 @@ import com.kostuciy.useractivity.R as activityR
 enum class TopLevelDestinations(
     @DrawableRes val selectedIcon: Int,
     @DrawableRes val unselectedIcon: Int,
+    val iconTint: Color,
     @StringRes val title: Int,
     val route: Any,
 ) {
@@ -20,6 +22,7 @@ enum class TopLevelDestinations(
         unselectedIcon = activityR.drawable.outline_home_24,
         title = activityR.string.destination_user_activity,
         route = UserActivity,
+        iconTint = Color(0xFFDC6142),
     ),
 
     MAP(
@@ -27,6 +30,7 @@ enum class TopLevelDestinations(
         unselectedIcon = mapR.drawable.baseline_map_24,
         title = mapR.string.destination_map,
         route = Map,
+        iconTint = Color(0xFF1BDC98),
     ),
 
     SETTINGS(
@@ -34,5 +38,6 @@ enum class TopLevelDestinations(
         unselectedIcon = settingsR.drawable.outline_settings_24,
         title = settingsR.string.destination_settings,
         route = SettingsGraph,
+        iconTint = Color(0xFF2AB8E3),
     ),
 }
